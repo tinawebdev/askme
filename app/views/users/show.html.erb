@@ -10,6 +10,17 @@
   <%= link_to "Спроси меня", '' %>
 </div>
 
+<div>
+    <% if @questions.size.zero? %>
+      <p>У пользователя нет вопросов</p>
+    <% else %>
+      <p> 
+        <%= @questions.size %>
+        <%= incline(@questions.size, 'вопрос', 'вопроса', 'вопросов') %>
+      </p>
+    <% end %>
+  </div>
+
 <% @questions.each do |question| %>
   <%= render partial: 'questions/question', object: question %>
 <% end %>
