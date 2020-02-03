@@ -50,4 +50,11 @@ class User < ApplicationRecord
       )
     end
   end
+
+  private
+
+  def normalize_username_and_email
+    self.username&.downcase!
+    self.email&.downcase!
+  end
 end
