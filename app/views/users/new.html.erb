@@ -1,0 +1,51 @@
+<div class="container">
+  <h3>Присоединяйся к нам!</h3>
+
+  <div class="card">
+    <div class="card-body bg-light">
+      <div class="form-group">
+        <%= form_for @user do |f| %>
+        
+          <% if @user.errors.any? %>
+            <div class="form-group">
+              <ul>
+                <% for message in @user.errors.full_messages %>
+                  <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <div class="form-group">
+            <%= f.label :email, 'Логин (email)' %>
+            <%= f.text_field :email, class: 'form-control' %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :username, 'Никнейм' %>
+            <%= f.text_field :username, class: 'form-control' %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :name, 'Имя' %>
+            <%= f.text_field :name, class: 'form-control' %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :password, 'Пароль' %>
+            <%= f.password_field :password, class: 'form-control' %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :password_confirmation, 'Пароль ещё раз' %>
+            <%= f.password_field :password_confirmation, class: 'form-control' %>
+          </div>
+
+          <div class="form-group">
+            <%= f.submit 'Зарегистрироваться', class: 'btn btn-primary' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,15 +1,24 @@
-<div>
-  <div>
+<div class="container">
+  <div class="p-2">
     <%= question.text %>
   </div>
 
   <% if question.answer.present? %>
-    <div>
-      <%= question.answer %>
+    <div class="p-2 m-2 bg-secondary text-light rounded">
+      <i class="p-2"><%= question.answer %></i>
     </div>
   <% end %>
 
-  <div>
-    <%= question.created_at.strftime('%d %b %M:%H') %>
+  <div class="p-2">
+    <%= l(question.created_at, format: :short) %>
   </div>
+
+  <% if question.user == current_user %>
+    <% edit_icon = question.answer.blank? ? 'reply' : 'edit' %>
+      <div class="p-2">
+        <%= link_to fa_icon(edit_icon), edit_question_path(question), class: "pr-2" %>
+        <%= link_to fa_icon('trash-alt'), question_path(question), class: "pr-2",
+                    method: :delete, data: {confirm: 'Точно удалить вопрос?'} %>
+      </div>
+  <% end %>
 </div>

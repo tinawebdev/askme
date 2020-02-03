@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Create:</strong>
+  <%= @question.create %>
+</p>
+
+<p>
+  <strong>Edit:</strong>
+  <%= @question.edit %>
+</p>
+
+<p>
+  <strong>Update:</strong>
+  <%= @question.update %>
+</p>
+
+<p>
+  <strong>Destroy:</strong>
+  <%= @question.destroy %>
+</p>
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', questions_path %>

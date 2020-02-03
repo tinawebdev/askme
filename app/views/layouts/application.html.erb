@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Askme</title>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,10 +14,22 @@
   <body>
     <div class="container">
       <h1><%= link_to "Хорошие вопросы", root_path %></h1>
-    </div>
 
-    <div class="container">
-      <%= yield %>
+      <div class="row mt-4">
+        <%= render "layouts/header" %>    
+
+        <div class="col-9 mb-4">
+          <% if flash.any? %>
+            <div class="container">
+              <% flash.each do |name, message| %>
+                <%= content_tag :div, message, class: "alert alert-info" %>
+              <% end %>
+            </div>
+          <% end %>
+
+          <%= yield %>
+        </div>
+      </div>
     </div>
   </body>
 </html>
