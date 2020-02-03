@@ -1,0 +1,13 @@
+<div>
+  <div>
+    <h1>Наши пользователи</h1>
+  </div>
+
+  <% @users.each do |user| %>
+    <div>
+      <div>
+        <%= link_to image_tag(user_avatar(user)), user_path(user) %>
+      </div>
+    </div>
+  <% end %>
+</div>

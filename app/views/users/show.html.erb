@@ -1,0 +1,32 @@
+<h1><%= @user.name %></h1>
+
+<div>
+  <%= image_tag user_avatar(@user), alt: '[Фото]' %>
+</div>
+
+<h2>@<%= @user.username %></h2>
+
+<div>
+  <%= link_to "Спроси меня", '' %>
+</div>
+
+<% @questions.each do |question| %>
+  <%= render partial: 'questions/question', object: question %>
+<% end %>
+
+<div>
+  <div class="form">
+    <%= form_for @new_question do |f| %>
+      <%= f.hidden_field :user_id %>
+
+      <div>
+        <%= f.label "Ваш вопрос для @#{@user.username}" %>
+        <%= f.text_area :text %>
+      </div>
+
+      <div>
+        <%= submit_tag 'Задать вопрос' %>
+      </div>
+    <% end %>
+  </div>
+</div>

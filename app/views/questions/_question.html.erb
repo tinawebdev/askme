@@ -1,0 +1,15 @@
+<div>
+  <div>
+    <%= question.text %>
+  </div>
+
+  <% if question.answer.present? %>
+    <div>
+      <%= question.answer %>
+    </div>
+  <% end %>
+
+  <div>
+    <%= question.created_at.strftime('%d %b %M:%H') %>
+  </div>
+</div>
