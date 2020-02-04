@@ -17,3 +17,10 @@ import './bootstrap_custom.js'
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+$(document).on("turbolinks:load", function() {
+  $('#ask-button').click(function(){
+    $('#ask-form').slideToggle(300);
+    return false;
+  });
+})

@@ -11,7 +11,22 @@
         <h3>@<%= @user.username %></h3>
 
         <div>
-          <%= link_to "Спроси меня", '', class: 'btn btn-primary', id: 'ask-button' %>      
+          <%= link_to "Спроси меня", '', class: 'btn btn-primary', id: 'ask-button' %> 
+
+          <div class="form-group mt-3" id="ask-form">
+            <%= form_for @new_question do |f| %>
+              <%= f.hidden_field :user_id %>
+
+              <div class="form-group">
+                <%= f.label "Ваш вопрос для @#{@user.username}" %>
+                <%= f.text_area :text, class: "form-control" %>
+              </div>
+
+              <div class="form-group">
+                <%= submit_tag 'Задать вопрос', class: 'btn btn-primary' %>
+              </div>
+            <% end %>
+          </div>     
           
           <div class="row mt-4 mb-2">
             <div class="col">
@@ -42,27 +57,10 @@
             </h2>
           <% end %>
         </div>
-
         <% @questions.each do |question| %>
           <li class="list-group-item"><%= render partial: 'questions/question', object: question %></li>
         <% end %>
-      </ul>
-
-      <div class="form-group mt-3">
-        <%= form_for @new_question do |f| %>
-          <%= f.hidden_field :user_id %>
-
-          <div class="form-group">
-            <%= f.label "Ваш вопрос для @#{@user.username}" %>
-            <%= f.text_area :text, class: "form-control" %>
-          </div>
-
-          <div class="form-group">
-            <%= submit_tag 'Задать вопрос', class: 'btn btn-primary' %>
-          </div>
-        <% end %>
-      </div>
-
+      </ul>      
     </div>
   </div>
 </div>
