@@ -11,8 +11,24 @@
         <h3>@<%= @user.username %></h3>
 
         <div>
-          <%= link_to "Спроси меня", '', class: 'btn btn-primary'%>          
+          <%= link_to "Спроси меня", '', class: 'btn btn-primary', id: 'ask-button' %>      
+          
+          <div class="row mt-4 mb-2">
+            <div class="col">
+              <h3><%= @questions_count %></h3>
+              <p>вопросов</p>
+            </div>
+            <div class="col">
+              <h3><%= @answers_count %></h3>
+              <p>ответов</p>
+            </div>
+            <div class="col">
+              <h3><%= @unanswered_count %></h3>
+              <p>безответных</p>
+            </div>
+          </div>    
         </div>
+
       </div>
 
       <ul class="list-group">
