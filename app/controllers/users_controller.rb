@@ -43,6 +43,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    @user.destroy
+    session[:user_id] = nil
+    redirect_to root_url, notice: "Аккаунт успешно удален"
+  end
+
   private
 
   def load_user

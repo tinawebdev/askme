@@ -55,7 +55,9 @@
 
       <div class="form-group">
         <%= f.submit 'Сохранить', class: 'btn btn-primary' %>
+        <%= link_to "Удалить аккаунт", @user, method: :delete,
+        data: { confirm: "Вы уверены? Все ваши данные будут удалены!" },
+        class: "btn btn-danger" %>
       </div>
     <% end %>
   </div>
-</div>
