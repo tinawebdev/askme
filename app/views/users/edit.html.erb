@@ -1,5 +1,5 @@
 <div class="container">
-  <h3>Присоединяйся к нам!</h3>
+  <h3>Редактирование профиля</h3>
 
   <div class="form-group">
     <%= form_for @user do |f| %>
@@ -30,12 +30,17 @@
       </div>
 
        <div class="form-group">
-        <%= f.label 'URL вашей аватарки' %>
+        <%= f.label :avatar_url, 'URL вашей аватарки' %>
         <%= f.text_field :avatar_url, class: 'form-control' %>
       </div>
 
-      <div>
-        Если не хотите менять пароль — оставьте эти поля пустыми!
+      <div class="form-group">
+        <%= f.label :bgcolor, "Цвет фона вашего профиля" %>
+        <%= f.color_field :bgcolor, value: "#f8f9fa", class: 'form-control' %>
+      </div>
+
+      <div class="mt-2 mb-2">
+        <strong>Если не хотите менять пароль — оставьте эти поля пустыми!</strong>
       </div>
 
       <div class="form-group">
