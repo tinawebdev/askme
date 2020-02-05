@@ -3,15 +3,18 @@
     <%= question.text %>
   </div>
 
+  <div class="p-2">
+    <% if question.author %>
+      <%= link_to "@#{question.author.username}", user_path(question.author), class: "badge badge-primary" %>
+    <% end %>
+    <span class="badge badge-light"> <%= l(question.created_at, format: :short) %></span>
+  </div>
+
   <% if question.answer.present? %>
     <div class="p-2 m-2 bg-secondary text-light rounded">
       <i class="p-2"><%= question.answer %></i>
     </div>
   <% end %>
-
-  <div class="p-2">
-    <%= l(question.created_at, format: :short) %>
-  </div>
 
   <% if question.user == current_user %>
     <% edit_icon = question.answer.blank? ? 'reply' : 'edit' %>
