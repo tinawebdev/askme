@@ -10,3 +10,12 @@
     </div>
   <% end %>
 </div>
+
+<div class="container mt-4">
+  <div>
+    <h3>Hashtags</h3>
+    <% @hashtags.each do |h| %>
+      <%= change_hashtags_to_links(h.name) %>
+    <% end %>
+  </div>
+</div>

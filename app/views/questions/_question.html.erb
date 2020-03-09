@@ -1,6 +1,6 @@
 <div class="container">
   <div class="p-2">
-    <%= question.text %>
+    <%= change_hashtags_to_links(question.text) %>
   </div>
 
   <div class="p-2">
@@ -11,8 +11,8 @@
   </div>
 
   <% if question.answer.present? %>
-    <div class="p-2 m-2 bg-secondary text-light rounded">
-      <i class="p-2"><%= question.answer %></i>
+    <div class="m-2 bg-light rounded">
+      <p class="p-3"><%= change_hashtags_to_links(question.answer) %></p>      
     </div>
   <% end %>
 
