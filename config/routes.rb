@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'hashtags/show'
   root to: 'users#index'
 
   get 'sign_up' => 'users#new'
