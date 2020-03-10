@@ -31,15 +31,15 @@
           <div class="row mt-4 mb-2">
             <div class="col">
               <h3><%= @questions_count %></h3>
-              <p>вопросов</p>
+              <%= incline(@questions_count, 'вопрос', 'вопроса', 'вопросов') %>
             </div>
             <div class="col">
               <h3><%= @answers_count %></h3>
-              <p>ответов</p>
+              <%= incline(@answers_count, 'ответ', 'ответа', 'ответов') %>
             </div>
             <div class="col">
               <h3><%= @unanswered_count %></h3>
-              <p>безответных</p>
+              <p>без ответа</p>
             </div>
           </div>    
         </div>
