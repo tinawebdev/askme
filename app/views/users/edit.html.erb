@@ -1,5 +1,5 @@
 <div class="container">
-  <h3>Редактирование профиля</h3>
+  <h3><%= t('links.edit_profile') %></h3>
 
   <div class="form-group">
     <%= form_for @user do |f| %>
@@ -15,48 +15,48 @@
       <% end %>
 
       <div class="form-group">
-        <%= f.label :email, 'Логин (email)' %>
+        <%= f.label :email, t('forms.email_login') %>
         <%= f.text_field :email, class: 'form-control' %>
       </div>
 
       <div class="form-group">
-        <%= f.label :username, 'Никнейм' %>
+        <%= f.label :username, t('forms.username') %>
         <%= f.text_field :username, class: 'form-control' %>
       </div>
 
       <div class="form-group">
-        <%= f.label :name, 'Имя' %>
+        <%= f.label :name, t('forms.name') %>
         <%= f.text_field :name, class: 'form-control' %>        
       </div>
 
        <div class="form-group">
-        <%= f.label :avatar_url, 'URL вашей аватарки' %>
+        <%= f.label :avatar_url, t('forms.avatar_url') %>
         <%= f.text_field :avatar_url, class: 'form-control' %>
       </div>
 
       <div class="form-group">
-        <%= f.label :bgcolor, "Цвет фона вашего профиля" %>
+        <%= f.label :bgcolor, t('forms.bgcolor') %>
         <%= f.color_field :bgcolor, class: 'form-control' %>
       </div>
 
       <div class="mt-2 mb-2">
-        <strong>Если не хотите менять пароль — оставьте эти поля пустыми!</strong>
+        <strong><%= t('forms.password_change') %></strong>
       </div>
 
       <div class="form-group">
-        <%= f.label :password, 'Пароль' %>
+        <%= f.label :password, t('forms.password') %>
         <%= f.password_field :password, class: 'form-control' %>
       </div>
 
       <div class="form-group">
-        <%= f.label :password_confirmation, 'Пароль ещё раз' %>
+        <%= f.label :password_confirmation, t('forms.password_confirmation') %>
         <%= f.password_field :password_confirmation, class: 'form-control' %>
       </div>
 
       <div class="form-group">
-        <%= f.submit 'Сохранить', class: 'btn btn-primary' %>
-        <%= link_to "Удалить аккаунт", @user, method: :delete,
-        data: { confirm: "Вы уверены? Все ваши данные будут удалены!" },
+        <%= f.submit t('forms.save'), class: 'btn btn-primary' %>
+        <%= link_to t('forms.delete_account'), @user, method: :delete,
+        data: { confirm: t('forms.destroy_confirm') },
         class: "btn btn-danger" %>
       </div>
     <% end %>

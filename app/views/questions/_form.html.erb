@@ -13,21 +13,21 @@
     <%= f.hidden_field :user_id %>
 
     <div class="form-group">
-      <%= f.label :text, 'Вопрос' %>
+      <%= f.label :text, t('forms.question') %>
       <%= f.text_area :text, class: 'form-control' %>
     </div>
 
     <% if current_user.present? && current_user == @question.user %>
       <div class="form-group">
-        <%= f.label :answer, 'Ответ' %>
+        <%= f.label :answer, t('forms.answer') %>
         <%= f.text_area :answer, class: 'form-control' %>
       </div>
     <% end %>
 
     <div class="form-group">
-      <%= f.submit 'Сохранить', class: 'btn btn-primary' %>
+      <%= f.submit t('forms.save'), class: 'btn btn-primary' %>
       или
-      <%= link_to "вернуться", user_path(@question.user) %>
+      <%= link_to t('forms.back'), user_path(@question.user) %>
     </div>
   <% end %>
 </div>

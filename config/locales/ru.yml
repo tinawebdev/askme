@@ -1,0 +1,63 @@
+ru:
+  activerecord:
+    models:
+      user: 'Пользователь'
+
+    attributes:
+      user:
+        email: 'Email'
+        username: 'Никнейм'
+        password: 'Пароль'
+      question:
+        text: 'Текст'
+      
+  controllers:
+    users:
+      updated: 'Вы обновили свой профиль'
+
+  links:
+    all_users: 'Все пользователи'   
+    ask_me: 'Спроси меня' 
+    edit: 'Редактировать'
+    edit_profile: 'Редактирование профиля'
+    good_questions: 'Хорошие вопросы'
+    hashtags: 'Hashtags'
+    our_users: 'Наши пользователи'
+    profile: 'Моя страница'
+    sign_in: 'Войти'
+    sign_out: 'Выйти'
+    sign_up: 'Регистрация'
+    question: 'Вопрос'
+    questions_with_hashtag: 'Вопросы с хештегом'
+    join_us: 'Присоединяйся к нам!'
+    user_has_no_questions: 'У пользователя нет вопросов'    
+
+  forms:
+    ask_question: "Задать вопрос"
+    answer: 'Ответ'
+    avatar_url: 'URL вашей аватарки'
+    back: 'вернуться'
+    bgcolor: 'Цвет фона вашего профиля'
+    create: 'Создать'
+    delete: 'Удалить'
+    delete_account: 'Удалить аккаунт'
+    destroy_confirm: 'Вы уверены, что хотите удалить?'
+    email_login: 'Логин (email)'  
+    name: 'Имя'
+    password: 'Пароль'
+    password_confirmation: 'Пароль ещё раз'    
+    password_change: 'Если не хотите менять пароль — оставьте эти поля пустыми!'
+    question: 'Вопрос'
+    question_for: 'Ваш вопрос для'
+    save: 'Сохранить'
+    sign_up: 'Зарегистрироваться'
+    username: 'Никнейм'
+  
+  incline:
+    question_one: 'вопрос'
+    question_few: 'вопроса'
+    question_any: 'вопросов'
+    answer_one: 'ответ'
+    answer_few: 'ответа'
+    answer_any: 'ответов'
+    no_answer: 'без ответа'

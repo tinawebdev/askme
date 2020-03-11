@@ -1,22 +1,22 @@
 <div class="container">
-  <h3>Войти на сайт</h3>
+  <h3><%= t('links.sign_in') %></h3>
 
   <div class="card">
     <div class="card-body bg-light">
       <div class="form-group">
         <%= form_tag sessions_path do %>
           <div class="form-group">
-            <%= label_tag :email, 'Логин (email)' %>
+            <%= label_tag :email, t('forms.email_login') %>
             <%= text_field_tag :email, params[:email], class: 'form-control' %>
           </div>
 
           <div class="form-group">
-            <%= label_tag :password, 'Пароль' %>
+            <%= label_tag :password, t('forms.password') %>
             <%= password_field_tag :password, '', class: 'form-control' %>
           </div>
 
           <div class="form-group">
-            <%= submit_tag "Войти", class: 'btn btn-primary' %>
+            <%= submit_tag t('links.sign_in'), class: 'btn btn-primary' %>
           </div>
         <% end %>
       </div>

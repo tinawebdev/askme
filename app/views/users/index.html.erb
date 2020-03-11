@@ -1,8 +1,7 @@
 <div class="container">
   <div>
-    <h3>Наши пользователи</h3>
+    <h3><%= t('links.our_users') %></h3>
   </div>
-
 
   <% @users.each do |user| %>
     <div class="d-inline-flex p-2 ">
@@ -13,7 +12,7 @@
 
 <div class="container mt-4">
   <div>
-    <h3>Hashtags</h3>
+    <h3><%= t('links.hashtags') %></h3>
     <% @hashtags.each do |h| %>
       <%= change_hashtags_to_links(h.name) %>
     <% end %>

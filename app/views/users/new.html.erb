@@ -1,5 +1,5 @@
 <div class="container">
-  <h3>Присоединяйся к нам!</h3>
+  <h3><%= t('links.join_us') %></h3>
 
   <div class="card">
     <div class="card-body bg-light">
@@ -17,32 +17,32 @@
           <% end %>
 
           <div class="form-group">
-            <%= f.label :email, 'Логин (email)' %>
+            <%= f.label :email, t('forms.email_login') %>
             <%= f.text_field :email, class: 'form-control' %>
           </div>
 
           <div class="form-group">
-            <%= f.label :username, 'Никнейм' %>
+            <%= f.label :username, t('forms.username') %>
             <%= f.text_field :username, class: 'form-control' %>
           </div>
 
           <div class="form-group">
-            <%= f.label :name, 'Имя' %>
+            <%= f.label :name, t('forms.name') %>
             <%= f.text_field :name, class: 'form-control' %>
           </div>
 
           <div class="form-group">
-            <%= f.label :password, 'Пароль' %>
+            <%= f.label :password, t('forms.password') %>
             <%= f.password_field :password, class: 'form-control' %>
           </div>
 
           <div class="form-group">
-            <%= f.label :password_confirmation, 'Пароль ещё раз' %>
+            <%= f.label :password_confirmation, t('forms.password_confirmation') %>
             <%= f.password_field :password_confirmation, class: 'form-control' %>
           </div>
 
           <div class="form-group">
-            <%= f.submit 'Зарегистрироваться', class: 'btn btn-primary' %>
+            <%= f.submit t('forms.sign_up'), class: 'btn btn-primary' %>
           </div>
         <% end %>
       </div>

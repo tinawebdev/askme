@@ -1,13 +1,13 @@
 <div class="col-3">
   <nav class="nav flex-column">
-    <%= link_to "Все пользователи", root_path, class: "btn btn-primary m-1" %>
+    <%= link_to t('links.all_users'), root_path, class: "btn btn-primary m-1" %>
     <% if current_user %>
-      <%= link_to "@#{current_user.username}", user_path(current_user), class: "btn btn-primary m-1" %>
-      <%= link_to 'Редактировать профиль', edit_user_path(current_user), class: "btn btn-primary m-1" %>
-      <%= link_to 'Выйти', log_out_path, class: "btn btn-primary m-1" %>
+      <%= link_to t('links.profile'), user_path(current_user), class: "btn btn-primary m-1" %>
+      <%= link_to t('links.edit'), edit_user_path(current_user), class: "btn btn-primary m-1" %>
+      <%= link_to t('links.sign_out'), log_out_path, class: "btn btn-primary m-1" %>
     <% else %>  
-      <%= link_to 'Войти', log_in_path, class: "btn btn-primary m-1" %>
-      <%= link_to 'Зарегистрироваться', sign_up_path, class: "btn btn-primary m-1" %>      
+      <%= link_to t('links.sign_in'), log_in_path, class: "btn btn-primary m-1" %>
+      <%= link_to t('links.sign_up'), sign_up_path, class: "btn btn-primary m-1" %>      
     <% end %>    
   </nav>
 </div>
