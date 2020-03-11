@@ -74,3 +74,7 @@ ru:
     answer_few: 'ответа'
     answer_any: 'ответов'
     no_answer: 'без ответа'
+
+  will_paginate:
+    previous_label: '< Назад'
+    next_label: 'Далее >'

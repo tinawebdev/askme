@@ -28,7 +28,7 @@ class UsersController < ApplicationController
   end
   
   def show
-    @questions = @user.questions.sorted
+    @questions = @user.questions.sorted.paginate(page: params[:page], per_page: 5)
     @new_question = @user.questions.build
     @questions_count = @questions.count
     @answers_count = @questions.where.not(answer: nil).count

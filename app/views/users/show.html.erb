@@ -43,23 +43,19 @@
             </div>
           </div>    
         </div>
-      </div>
-
+      </div>      
+          
       <ul class="list-group">
-        <div class="mt-3">
-          <% if @questions.size.zero? %>
+        <%= will_paginate(@questions, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>   
+        <% if @questions.size.zero? %>
+          <div class="mt-3">
             <h3 class="text-center"><%= t('links.user_has_no_questions') %></h3>
-          <% else %>
-            <h3> 
-              <%= @questions.size %>
-              <%= incline(@questions.size, t('incline.question_one'), t('incline.question_few'), t('incline.question_any')) %>
-            </h3>
-          <% end %>
-        </div>
+          </div>    
+        <% end %>            
         <% @questions.each do |question| %>
-          <li class="list-group-item"><%= render partial: 'questions/question', object: question %></li>
+          <li class="list-group-item rounded mt-3"><%= render partial: 'questions/question', object: question %></li>
         <% end %>
-      </ul>      
+      </ul>   
     </div>
   </div>
 </div>
