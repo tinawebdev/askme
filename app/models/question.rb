@@ -10,6 +10,8 @@ class Question < ApplicationRecord
   after_save :create_hashtags
   after_commit :destroy_unused_hashtags, on: [:update, :destroy]
 
+  scope :sorted, -> { order(created_at: :desc) }
+
   private
 
   def create_hashtags
