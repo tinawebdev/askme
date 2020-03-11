@@ -20,6 +20,7 @@ class User < ApplicationRecord
 
   before_validation :normalize_username_and_email
   before_save :encrypt_password
+  before_save :set_slug
 
   scope :sorted, -> { order(created_at: :desc) }
 
@@ -55,7 +56,15 @@ class User < ApplicationRecord
     end
   end
 
+  def to_param
+    slug
+  end
+
   private
+
+  def set_slug
+    self.slug = username.parameterize
+  end
 
   def normalize_username_and_email
     self.username&.downcase!

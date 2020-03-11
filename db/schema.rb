@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_09_101317) do
+ActiveRecord::Schema.define(version: 2020_03_11_112317) do
 
   create_table "hashtags", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "slug"
   end
 
   create_table "hashtags_questions", force: :cascade do |t|
@@ -48,6 +49,7 @@ ActiveRecord::Schema.define(version: 2020_03_09_101317) do
     t.string "password_salt"
     t.string "avatar_url"
     t.string "bgcolor", default: "#f8f9fa"
+    t.string "slug"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true
   end
