@@ -9,7 +9,7 @@ class QuestionsController < ApplicationController
     @question = Question.new(question_params)
     @question.author = current_user
     if @question.save
-      redirect_to user_path(@question.user), notice: 'Вопрос задан'
+      redirect_to user_path(@question.user), notice: t('controllers.questions.question_asked')
     else
       render :edit
     end
@@ -17,7 +17,7 @@ class QuestionsController < ApplicationController
 
   def update
     if @question.update(question_params)
-      redirect_to user_path(@question.user), notice: 'Вопрос сохранен'
+      redirect_to user_path(@question.user), notice: t('controllers.questions.question_saved')
     else
       render :edit
     end
@@ -26,7 +26,7 @@ class QuestionsController < ApplicationController
   def destroy
     user = @question.user
     @question.destroy
-    redirect_to user_path(user), notice: 'Вопрос удален :('
+    redirect_to user_path(user), notice: t('controllers.questions.question_deleted')
   end
 
   private

@@ -12,8 +12,21 @@ ru:
         text: 'Текст'
       
   controllers:
+    application:      
+      access_denied: 'У Вас нет доступа.'
     users:
-      updated: 'Вы обновили свой профиль'
+      updated: 'Данные обновлены'
+      deleted: 'Аккаунт успешно удален'
+      you_are_already_logged_in: 'Вы уже залогинены'
+      successfully_registered: 'Пользователь успешно зарегистрирован и залогинен!'
+    questions:
+      question_asked: 'Вопрос задан'
+      question_saved: 'Вопрос сохранен'
+      question_deleted: 'Вопрос удален :('
+    sessions:
+      successfully_logged_in: 'Вы успешно залогинились'
+      invalid_email_or_password: 'Неправильный email или пароль'      
+      you_are_logged_out: 'Вы разлогинились! Приходите еще!'
 
   links:
     all_users: 'Все пользователи'   
