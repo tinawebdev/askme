@@ -4,10 +4,10 @@
     <% if current_user %>
       <%= link_to t('links.profile'), user_path(current_user), class: "btn btn-primary m-1" %>
       <%= link_to t('links.edit'), edit_user_path(current_user), class: "btn btn-primary m-1" %>
-      <%= link_to t('links.sign_out'), log_out_path, class: "btn btn-primary m-1" %>
+      <%= link_to t('links.sign_out'), session_path, data: { method: :delete }, class: "btn btn-primary m-1" %>
     <% else %>  
-      <%= link_to t('links.sign_in'), log_in_path, class: "btn btn-primary m-1" %>
-      <%= link_to t('links.sign_up'), sign_up_path, class: "btn btn-primary m-1" %>      
+      <%= link_to t('links.sign_in'), new_session_path, class: "btn btn-primary m-1" %>
+      <%= link_to t('links.sign_up'), new_user_path, class: "btn btn-primary m-1" %>      
     <% end %>    
   </nav>
 </div>

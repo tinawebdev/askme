@@ -4,7 +4,7 @@
   <div class="card">
     <div class="card-body bg-light">
       <div class="form-group">
-        <%= form_tag sessions_path do %>
+        <%= form_tag session_path do %>
           <div class="form-group">
             <%= label_tag :email, t('forms.email_login') %>
             <%= text_field_tag :email, params[:email], class: 'form-control' %>

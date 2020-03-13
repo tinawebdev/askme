@@ -3,7 +3,7 @@ class Hashtag < ApplicationRecord
 
   before_save :set_slug
   
-  has_many :hashtags_questions
+  has_many :hashtags_questions, dependent: :destroy
   has_many :questions, through: :hashtags_questions  
 
   scope :sorted, -> { order(:name) }
