@@ -14,6 +14,7 @@ gem 'rails-i18n', '~> 6.0.0'
 gem 'will_paginate', '~> 3.1.0'
 gem 'bootstrap-will_paginate'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'dotenv-rails', require: 'dotenv/rails-now'
 gem 'recaptcha', '~> 5.5'
 
 group :development, :test do
