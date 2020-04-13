@@ -22,6 +22,10 @@
                 <%= f.text_area :text, class: "form-control" %>
               </div>
 
+              <div class="d-flex justify-content-center mb-3">
+                <%= recaptcha_tags unless current_user.present? %>
+              </div>
+
               <div class="form-group">
                 <%= submit_tag t('forms.ask_question'), class: 'btn btn-primary' %>
               </div>

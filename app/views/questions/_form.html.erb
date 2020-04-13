@@ -24,6 +24,10 @@
       </div>
     <% end %>
 
+    <div class="mb-3">
+      <%= recaptcha_tags unless current_user.present? %>
+    </div>
+
     <div class="form-group">
       <%= f.submit t('forms.save'), class: 'btn btn-primary' %>
       или
