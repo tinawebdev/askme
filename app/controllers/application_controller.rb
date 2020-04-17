@@ -10,4 +10,8 @@ class ApplicationController < ActionController::Base
   def reject_user
     redirect_to root_path, alert: t('controllers.application.access_denied')
   end
+
+  def check_captcha(model)
+    current_user.present? || verify_recaptcha(model: model)
+  end
 end

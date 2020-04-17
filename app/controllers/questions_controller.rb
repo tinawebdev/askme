@@ -31,10 +31,6 @@ class QuestionsController < ApplicationController
 
   private
 
-  def check_captcha(model)
-    current_user.present? || verify_recaptcha(model: model)
-  end
-
   def authorize_user
     reject_user unless @question.user == current_user
   end
