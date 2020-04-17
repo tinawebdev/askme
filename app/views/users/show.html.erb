@@ -1,6 +1,6 @@
 <div class="container">
   <div class="card">
-    <div class="card-body" style="background-color: <%= @user.bgcolor %>">
+    <div id="user-profile" class="card-body" style="background-color: <%= @user.bgcolor %>">
       <div class="text-center">
         <h1><%= @user.name %></h1>
 
@@ -11,9 +11,9 @@
         <h3>@<%= @user.username %></h3>
 
         <div>
-          <%= link_to t('links.ask_me'), '', class: 'btn btn-primary', id: 'ask-button' %> 
+          <%= link_to t('links.ask_me'), '', class: 'btn btn-primary', id: 'ask-button' %>
 
-          <div class="form-group mt-3" id="ask-form">
+          <div class="form-group mt-3 ask-form" id="ask-form">
             <%= form_for @new_question do |f| %>
               <%= f.hidden_field :user_id %>
 
@@ -30,7 +30,7 @@
                 <%= submit_tag t('forms.ask_question'), class: 'btn btn-primary' %>
               </div>
             <% end %>
-          </div>     
+          </div>
           
           <div class="row mt-4 mb-2">
             <div class="col">
@@ -45,21 +45,21 @@
               <h3><%= @unanswered_count %></h3>
               <p><%= t('incline.no_answer') %></p>
             </div>
-          </div>    
+          </div>
         </div>
-      </div>      
+      </div>
           
       <ul class="list-group">
         <%= will_paginate(@questions, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>   
         <% if @questions.size.zero? %>
           <div class="mt-3">
             <h3 class="text-center"><%= t('links.user_has_no_questions') %></h3>
-          </div>    
-        <% end %>            
+          </div>
+        <% end %>
         <% @questions.each do |question| %>
           <li class="list-group-item rounded mt-3"><%= render partial: 'questions/question', object: question %></li>
         <% end %>
-      </ul>   
+      </ul>
     </div>
   </div>
 </div>

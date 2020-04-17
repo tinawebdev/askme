@@ -12,13 +12,15 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="container-fluid">
       <h1><%= link_to t('links.good_questions'), root_path %></h1>
 
-      <div class="row mt-4">
-        <%= render "layouts/header" %>    
+      <div class="row mt-4 content">
+        <div class="col-md-3">
+          <%= render "layouts/nav" %>
+        </div>
 
-        <div class="col-9 mb-4">
+        <div class="col-md-9 mb-4">
           <% if flash.any? %>
             <div class="container">
               <% flash.each do |name, message| %>
@@ -31,5 +33,6 @@
         </div>
       </div>
     </div>
+    <%= render "layouts/footer" %>
   </body>
 </html>
