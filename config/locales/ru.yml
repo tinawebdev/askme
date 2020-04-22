@@ -25,7 +25,7 @@ ru:
       question_deleted: 'Вопрос удален :('
     sessions:
       successfully_logged_in: 'Вы успешно залогинились'
-      invalid_email_or_password: 'Неправильный email или пароль'      
+      invalid_email_or_password: 'Неправильный email или пароль'
       you_are_logged_out: 'Вы разлогинились! Приходите еще!'
 
   links:
@@ -43,7 +43,7 @@ ru:
     question: 'Вопрос'
     questions_with_hashtag: 'Вопросы с хештегом'
     join_us: 'Присоединяйся к нам!'
-    user_has_no_questions: 'У пользователя нет вопросов'    
+    user_has_no_questions: 'У пользователя нет вопросов'
 
   forms:
     ask_question: "Задать вопрос"
@@ -55,10 +55,10 @@ ru:
     delete: 'Удалить'
     delete_account: 'Удалить аккаунт'
     destroy_confirm: 'Вы уверены, что хотите удалить?'
-    email_login: 'Логин (email)'  
+    email_login: 'Логин (email)'
     name: 'Имя'
     password: 'Пароль'
-    password_confirmation: 'Пароль ещё раз'    
+    password_confirmation: 'Пароль ещё раз'
     password_change: 'Если не хотите менять пароль — оставьте эти поля пустыми!'
     question: 'Вопрос'
     question_for: 'Ваш вопрос для'
@@ -76,5 +76,5 @@ ru:
     no_answer: 'без ответа'
 
   will_paginate:
-    previous_label: '< Назад'
-    next_label: 'Далее >'
+    previous_label: 'Назад'
+    next_label: 'Далее'
