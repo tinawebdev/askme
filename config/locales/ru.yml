@@ -44,6 +44,7 @@ ru:
     questions_with_hashtag: 'Вопросы с хештегом'
     join_us: 'Присоединяйся к нам!'
     user_has_no_questions: 'У пользователя нет вопросов'
+    default_bgcolor: 'Вернуть по умолчанию'
 
   forms:
     ask_question: "Задать вопрос"

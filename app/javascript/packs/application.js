@@ -24,5 +24,10 @@ $(document).on("turbolinks:load", function() {
     return false;
   });
 
-  $('.alert').alert()
-})
+  $('.alert').alert();
+
+  $('.bgcolor_reset').on('click', function (event) {
+    event.preventDefault();
+    $('#user_bgcolor').val('#f8f9fa');
+  });
+});
