@@ -23,4 +23,6 @@ $(document).on("turbolinks:load", function() {
     $('#ask-form').slideToggle(300);
     return false;
   });
+
+  $('.alert').alert()
 })
